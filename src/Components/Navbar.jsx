@@ -16,12 +16,12 @@ import {
   DrawerCloseButton,
   DrawerBody,
   DrawerHeader,
-  Box,
+  Box
 } from "@chakra-ui/react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import logo from "../images/leela dhar (1).png";
-import { Link as ReactRouterLink } from 'react-router-dom'             
+import { Link, Link as ReactRouterLink } from 'react-router-dom'             
 import { Link as ChakraLink } from "@chakra-ui/react";
 import Resume from "../resume/Leeladhar-Resume.pdf";
 
@@ -54,12 +54,12 @@ const Navbar = () => {
     onClose();
   };
 
-  const linkStyles = (section) => ({
-    mx: 3,
-    textDecoration: 'none',
-    color: activeSection === section ? '#A32B36' : '#0a3543',
-    cursor: 'pointer',
-  });
+  // const linkStyles = (section) => ({
+  //   mx: 3,
+  //   textDecoration: 'none',
+  //   color: activeSection === section ? '#A32B36' : '#0a3543',
+  //   cursor: 'pointer',
+  // });
 
   const link = document.createElement("a");
   link.className = "resume-link-2";
@@ -97,7 +97,7 @@ const Navbar = () => {
               <DrawerHeader>Menu</DrawerHeader>
               <DrawerBody>
                 <VStack spacing={4} align="stretch">
-                  <Text
+                  {/* <Text
                     className="nav-link home"
                     {...linkStyles('home')}
                     onClick={() => scrollTo('home', 'home')}
@@ -131,7 +131,48 @@ const Navbar = () => {
                     onClick={() => scrollTo('contact', 'contact')}
                   >
                     Contact
-                  </Text>
+                  </Text> */}
+
+<Link
+          className="nav-link home"
+          onClick={() => scrollTo("home")}
+          mx={3}
+          textDecoration="none"
+        >
+          Home
+        </Link>
+        <Link
+          className="nav-link about"
+          onClick={() => scrollTo("about")}
+          mx={3}
+          textDecoration="none"
+        >
+          About
+        </Link>
+        <Link
+          className="nav-link skills"
+          onClick={() => scrollTo("skills")}
+          mx={3}
+          textDecoration="none"
+        >
+          Skills
+        </Link>
+        <Link
+          className="nav-link projects"
+          onClick={() => scrollTo("projects")}
+          mx={3}
+          textDecoration="none"
+        >
+          Projects
+        </Link>
+        <Link
+          className="nav-link contact"
+          onClick={() => scrollTo("contact")}
+          mx={2}
+          textDecoration="none"
+        >
+          Contact
+        </Link>
                 </VStack>
               </DrawerBody>
             </DrawerContent>
@@ -165,7 +206,7 @@ const Navbar = () => {
         ml={{base:0, lg:10}}
         mb={2}
       >
-        <Text {...linkStyles('home')} onClick={() => scrollTo('home', 'home')}>
+        {/* <Text {...linkStyles('home')} onClick={() => scrollTo('home', 'home')}>
           Home
         </Text>
         <Text {...linkStyles('about')} onClick={() => scrollTo('about', 'about')}>
@@ -179,7 +220,47 @@ const Navbar = () => {
         </Text>
         <Text {...linkStyles('contact')} onClick={() => scrollTo('contact', 'contact')}>
           Contact
-        </Text>
+        </Text> */}
+         <Link
+          className="nav-link home"
+          onClick={() => scrollTo("home")}
+          mx={3}
+          textDecoration="none"
+        >
+          Home
+        </Link>
+        <Link
+          className="nav-link about"
+          onClick={() => scrollTo("about")}
+          mx={3}
+          textDecoration="none"
+        >
+          About
+        </Link>
+        <Link
+          className="nav-link skills"
+          onClick={() => scrollTo("skills")}
+          mx={3}
+          textDecoration="none"
+        >
+          Skills
+        </Link>
+        <Link
+          className="nav-link projects"
+          onClick={() => scrollTo("projects")}
+          mx={3}
+          textDecoration="none"
+        >
+          Projects
+        </Link>
+        <Link
+          className="nav-link contact"
+          onClick={() => scrollTo("contact")}
+          mx={2}
+          textDecoration="none"
+        >
+          Contact
+        </Link>
       </Flex>
       <Spacer />
 

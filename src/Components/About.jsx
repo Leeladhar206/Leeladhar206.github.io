@@ -80,7 +80,6 @@ const resumedown = () => {
         >
           <ChakraLink as={ReactRouterLink}
           id="resume-link-2"
-          className="nav-link resume"
          to="https://drive.google.com/uc?export=download&id=1qF_M6h2dF8Iq_bppQxJJgb8homqBGlT-"
          >Resume
          </ChakraLink>
