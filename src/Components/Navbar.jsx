@@ -98,30 +98,35 @@ const Navbar = () => {
               <DrawerBody>
                 <VStack spacing={4} align="stretch">
                   <Text
+                    className="nav-link home"
                     {...linkStyles('home')}
                     onClick={() => scrollTo('home', 'home')}
                   >
                     Home
                   </Text>
                   <Text
+                        className="nav-link about"
                     {...linkStyles('about')}
                     onClick={() => scrollTo('about', 'about')}
                   >
                     About
                   </Text>
                   <Text
+                       className="nav-link skills"
                     {...linkStyles('skills')}
                     onClick={() => scrollTo('skills', 'skills')}
                   >
                     Skills
                   </Text>
                   <Text
+                   className="nav-link projects"
                     {...linkStyles('projects')}
                     onClick={() => scrollTo('projects', 'projects')}
                   >
                     Projects
                   </Text>
                   <Text
+                          className="nav-link contact"
                     {...linkStyles('contact')}
                     onClick={() => scrollTo('contact', 'contact')}
                   >
