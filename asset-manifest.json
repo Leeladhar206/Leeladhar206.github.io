@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.f6b2d708.js",
+    "main.js": "/static/js/main.c2e25284.js",
     "static/js/787.d4be6ac0.chunk.js": "/static/js/787.d4be6ac0.chunk.js",
     "static/media/TravelCard.png": "/static/media/TravelCard.9b4dee42d2766697d757.png",
     "static/media/Space-Odyssey.png": "/static/media/Space-Odyssey.523db3964088f8a381b4.png",
     "static/media/Trendio.png": "/static/media/Trendio.d7ec2c2709923205c335.png",
     "static/media/CreditWave.png": "/static/media/CreditWave.52a8463882117b1ec14a.png",
+    "static/media/Leeladhar-Resume.pdf": "/static/media/Leeladhar-Resume.95a4d97f3964b030ef73.pdf",
     "static/media/professionalPic.jpg": "/static/media/professionalPic.aed6a73db488c2df3f70.jpg",
     "static/media/Node.svg": "/static/media/Node.73e0a22462a6515080525af1b2802b23.svg",
     "static/media/React.svg": "/static/media/React.e3a210a21562d50732208ac4698dfbd6.svg",
@@ -20,11 +21,11 @@
     "static/media/HTML.svg": "/static/media/HTML.f1f2fbc5196fd77aa0e2b99feb9515bb.svg",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.f6b2d708.js.map": "/static/js/main.f6b2d708.js.map",
+    "main.c2e25284.js.map": "/static/js/main.c2e25284.js.map",
     "787.d4be6ac0.chunk.js.map": "/static/js/787.d4be6ac0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.f6b2d708.js"
+    "static/js/main.c2e25284.js"
   ]
 }
