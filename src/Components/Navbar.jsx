@@ -1,11 +1,9 @@
-
-import React, { useState } from "react";
+import React from "react";
 import {
   Flex,
   IconButton,
   Collapse,
   VStack,
-  Text,
   useDisclosure,
   Button,
   Image,
@@ -16,163 +14,115 @@ import {
   DrawerCloseButton,
   DrawerBody,
   DrawerHeader,
-  Box
+  Box,
 } from "@chakra-ui/react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
-import logo from "../images/leela dhar (1).png";
-import { Link, Link as ReactRouterLink } from 'react-router-dom'             
+import logo from "../images/logo.png";
 import { Link as ChakraLink } from "@chakra-ui/react";
-import Resume from "../resume/Leeladhar-Resume.pdf";
+import Resume from "../resume/Jagarapu-Leeladhar-Resume.pdf";
 
 const Navbar = () => {
-
-  
   const newFont = `
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Outfit:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">`
-
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Outfit:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">`;
 
   const { isOpen, onToggle, onClose } = useDisclosure();
-  const [activeSection, setActiveSection] = useState(null);
-
-  const resumedown = () => {
-    window.open(
-      "https://drive.google.com/file/d/1qF_M6h2dF8Iq_bppQxJJgb8homqBGlT-/view?usp=sharing",
-      "_blank"
-    )
-  };
-  
 
   const scrollTo = (elementId, section) => {
-    scroll.scrollTo(document.getElementById(elementId).offsetTop - 60, {
+    scroll.scrollTo(document.getElementById(elementId).offsetTop - 130, {
       duration: 1000,
       smooth: "easeInOutQuart",
     });
-    setActiveSection(section);
     onClose();
   };
 
-  // const linkStyles = (section) => ({
-  //   mx: 3,
-  //   textDecoration: 'none',
-  //   color: activeSection === section ? '#A32B36' : '#0a3543',
-  //   cursor: 'pointer',
-  // });
-
-  const link = document.createElement("a");
-  link.className = "resume-link-2";
-  link.href = Resume;
-  link.setAttribute("download", "Leeladhar-Resume.pdf");
-  document.body.appendChild(link);
-
   return (
+    <Box w='100%'
+    bg="#E6E7EB"
+    position="sticky"
+      top={0}
+      zIndex={1000}
+    >
     <Flex
-    justify="space-between"
-    align="flex-end"
-      pl={{base:3, lg:10}}
-      pr={{base:3, lg:10}}
+      justify="space-between"
+      align="flex-end"
+      pl={{ base: 3, lg: 10 }}
+      pr={{ base: 3, lg: 10 }}
+      pb={2}
       bg="#E6E7EB"
       color="#06113C"
       position="sticky"
       top={0}
       zIndex={1000}
       id="nav-menu"
-      h={{base:'70px', md:'100px'}}
+      h={{ base: "70px", md: "100px" }}
       boxShadow="0px 2px 2px -2px rgba(0,0,0,0.2)"
       fontFamily="Lexend, sans-serif"
-      w={{base:'100%', md:'80%'}}
-      m='auto'
+      w={{ base: "100%", md: "80%" }}
+      m="auto"
     >
-      <Box dangerouslySetInnerHTML={{ __html: newFont }} 
-       textAlign={'left'}
-      />
+      <Box dangerouslySetInnerHTML={{ __html: newFont }} textAlign={"left"} />
 
       <Collapse in={isOpen} animateOpacity>
         <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay>
-            <DrawerContent>
+            <DrawerContent color="#06113C" bg="#E6E7EB">
               <DrawerCloseButton />
               <DrawerHeader>Menu</DrawerHeader>
               <DrawerBody>
-                <VStack spacing={4} align="stretch">
-                  {/* <Text
+                <VStack spacing={8} align="stretch">
+                  <ChakraLink
                     className="nav-link home"
-                    {...linkStyles('home')}
-                    onClick={() => scrollTo('home', 'home')}
+                    onClick={() => scrollTo("home")}
+                    mx={3}
+                    textDecoration="none"
+                    fontSize={"lg"}
+                    fontWeight={400}
                   >
                     Home
-                  </Text>
-                  <Text
-                        className="nav-link about"
-                    {...linkStyles('about')}
-                    onClick={() => scrollTo('about', 'about')}
+                  </ChakraLink>
+                  <ChakraLink
+                    className="nav-link about"
+                    onClick={() => scrollTo("about")}
+                    textDecoration="none"
+                    mx={3}
+                    fontSize={"lg"}
+                    fontWeight={400}
                   >
                     About
-                  </Text>
-                  <Text
-                       className="nav-link skills"
-                    {...linkStyles('skills')}
-                    onClick={() => scrollTo('skills', 'skills')}
+                  </ChakraLink>
+                  <ChakraLink
+                    className="nav-link skills"
+                    onClick={() => scrollTo("skills")}
+                    mx={3}
+                    textDecoration="none"
+                    fontSize={"lg"}
+                    fontWeight={400}
                   >
                     Skills
-                  </Text>
-                  <Text
-                   className="nav-link projects"
-                    {...linkStyles('projects')}
-                    onClick={() => scrollTo('projects', 'projects')}
+                  </ChakraLink>
+                  <ChakraLink
+                    className="nav-link projects"
+                    onClick={() => scrollTo("projects")}
+                    mx={3}
+                    textDecoration="none"
+                    fontSize={"lg"}
+                    fontWeight={400}
                   >
                     Projects
-                  </Text>
-                  <Text
-                          className="nav-link contact"
-                    {...linkStyles('contact')}
-                    onClick={() => scrollTo('contact', 'contact')}
+                  </ChakraLink>
+                  <ChakraLink
+                    className="nav-link contact"
+                    onClick={() => scrollTo("contact")}
+                    mx={3}
+                    textDecoration="none"
+                    fontSize={"lg"}
+                    fontWeight={400}
                   >
                     Contact
-                  </Text> */}
-
-<Link
-          className="nav-link home"
-          onClick={() => scrollTo("home")}
-          mx={3}
-          textDecoration="none"
-        >
-          Home
-        </Link>
-        <Link
-          className="nav-link about"
-          onClick={() => scrollTo("about")}
-          mx={3}
-          textDecoration="none"
-        >
-          About
-        </Link>
-        <Link
-          className="nav-link skills"
-          onClick={() => scrollTo("skills")}
-          mx={3}
-          textDecoration="none"
-        >
-          Skills
-        </Link>
-        <Link
-          className="nav-link projects"
-          onClick={() => scrollTo("projects")}
-          mx={3}
-          textDecoration="none"
-        >
-          Projects
-        </Link>
-        <Link
-          className="nav-link contact"
-          onClick={() => scrollTo("contact")}
-          mx={2}
-          textDecoration="none"
-        >
-          Contact
-        </Link>
+                  </ChakraLink>
                 </VStack>
               </DrawerBody>
             </DrawerContent>
@@ -203,103 +153,168 @@ const Navbar = () => {
         align="center"
         justify="space-between"
         fontSize={"md"}
-        ml={{base:0, lg:10}}
+        ml={{ base: 0, md: 10 }}
         mb={2}
+        gap={{ base: "10px", md: "none" }}
       >
-        {/* <Text {...linkStyles('home')} onClick={() => scrollTo('home', 'home')}>
-          Home
-        </Text>
-        <Text {...linkStyles('about')} onClick={() => scrollTo('about', 'about')}>
-          About
-        </Text>
-        <Text {...linkStyles('skills')} onClick={() => scrollTo('skills', 'skills')}>
-          Skills
-        </Text>
-        <Text {...linkStyles('projects')} onClick={() => scrollTo('projects', 'projects')}>
-          Projects
-        </Text>
-        <Text {...linkStyles('contact')} onClick={() => scrollTo('contact', 'contact')}>
-          Contact
-        </Text> */}
-         <Link
+        <ChakraLink
           className="nav-link home"
           onClick={() => scrollTo("home")}
           mx={3}
           textDecoration="none"
+          position="relative"
+          _before={{
+            content: '""',
+            position: "absolute",
+            bottom: "-3px",
+            height: "2px",
+            width: "100%",
+            backgroundColor: "#06113C",
+            opacity: "0.7",
+            borderRadius: "40px",
+            transform: "scaleX(0)",
+            transition: "transform 0.2s linear",
+          }}
+          _hover={{
+            "&::before": {
+              transform: "scaleX(1)",
+            },
+          }}
         >
           Home
-        </Link>
-        <Link
+        </ChakraLink>
+        <ChakraLink
           className="nav-link about"
           onClick={() => scrollTo("about")}
           mx={3}
           textDecoration="none"
+          position="relative"
+          _before={{
+            content: '""',
+            position: "absolute",
+            bottom: "-3px",
+            height: "2px",
+            width: "100%",
+            backgroundColor: "#06113C",
+            opacity: "0.7",
+            borderRadius: "40px",
+            transform: "scaleX(0)",
+            transition: "transform 0.2s linear",
+          }}
+          _hover={{
+            "&::before": {
+              transform: "scaleX(1)",
+            },
+          }}
         >
           About
-        </Link>
-        <Link
+        </ChakraLink>
+        <ChakraLink
           className="nav-link skills"
           onClick={() => scrollTo("skills")}
           mx={3}
           textDecoration="none"
+          position="relative"
+          _before={{
+            content: '""',
+            position: "absolute",
+            bottom: "-3px",
+            height: "2px",
+            width: "100%",
+            backgroundColor: "#06113C",
+            opacity: "0.7",
+            borderRadius: "40px",
+            transform: "scaleX(0)",
+            transition: "transform 0.2s linear",
+          }}
+          _hover={{
+            "&::before": {
+              transform: "scaleX(1)",
+            },
+          }}
         >
           Skills
-        </Link>
-        <Link
+        </ChakraLink>
+        <ChakraLink
           className="nav-link projects"
           onClick={() => scrollTo("projects")}
           mx={3}
           textDecoration="none"
+          position="relative"
+          _before={{
+            content: '""',
+            position: "absolute",
+            bottom: "-3px",
+            height: "2px",
+            width: "100%",
+            backgroundColor: "#06113C",
+            opacity: "0.7",
+            borderRadius: "40px",
+            transform: "scaleX(0)",
+            transition: "transform 0.2s linear",
+          }}
+          _hover={{
+            "&::before": {
+              transform: "scaleX(1)",
+            },
+          }}
         >
           Projects
-        </Link>
-        <Link
+        </ChakraLink>
+        <ChakraLink
           className="nav-link contact"
           onClick={() => scrollTo("contact")}
           mx={2}
           textDecoration="none"
+          position="relative"
+          _before={{
+            content: '""',
+            position: "absolute",
+            bottom: "-3px",
+            height: "2px",
+            width: "100%",
+            backgroundColor: "#06113C",
+            opacity: "0.7",
+            borderRadius: "40px",
+            transform: "scaleX(0)",
+            transition: "transform 0.2s linear",
+          }}
+          _hover={{
+            "&::before": {
+              transform: "scaleX(1)",
+            },
+          }}
         >
           Contact
-        </Link>
+        </ChakraLink>
       </Flex>
       <Spacer />
 
-      {/* <Button
-        mr={6}
+      <Button
+        id="resume-button-1"
+        className="nav-link resume"
+        as="a"
+        // mr={3}
         mb={2}
-        id="resume-button-2"
-        href={Resume}
-        download="Leeladhar-Resume.pdf"
+        href="https://drive.google.com/file/d/1h7O1jwWdCbvboFWRjhfksp4z0FgWr_Mr/view?usp=sharing"
         target="_blank"
         onClick={() => {
-          window.open(
-            "https://drive.google.com/file/d/1qF_M6h2dF8Iq_bppQxJJgb8homqBGlT-/view?usp=sharing",
-            "_blank"
-          );
+          const link = document.createElement("a");
+          link.href = Resume;
+          link.setAttribute("download", "Jagarapu-Leeladhar-Resume.pdf");
+          link.click();
         }}
-        colorScheme="#0a3543"
+        colorScheme="#06113C"
         variant="outline"
         _hover={{
-          bg: "#06113C", 
+          bg: "#06113C",
           color: "#E6E7EB",
         }}
       >
         Resume
-      </Button> */}
-
-      <Button
-          id="resume-button-1"
-           onClick={resumedown}
-        >
-          <ChakraLink as={ReactRouterLink}
-          id="resume-link-1"
-          className="nav-link resume"
-         to="https://drive.google.com/uc?export=download&id=1qF_M6h2dF8Iq_bppQxJJgb8homqBGlT-"
-         >Resume
-         </ChakraLink>
-
-        </Button>
+      </Button>
     </Flex>
+    </Box>
   );
 };
 

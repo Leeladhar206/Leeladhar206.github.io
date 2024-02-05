@@ -10,12 +10,20 @@ import { Box } from '@chakra-ui/react';
 
 function App() {
 
+  const newFont = `
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">`
+
   return (
 
     <Box
       bg="#E6E7EB"
       color="#06113C"
+      fontFamily="Lexend, sans-serif"
     >
+      <Box dangerouslySetInnerHTML={{ __html: newFont }} 
+      />
         <Navbar/>
          <Home/>
          <About/>
