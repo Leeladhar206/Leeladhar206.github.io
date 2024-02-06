@@ -159,6 +159,8 @@ const ProjectCard = ({
             className="project-github-link"
             as="a"
             href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
             isExternal
             colorScheme="#0a3543"
             variant="outline"
@@ -175,6 +177,8 @@ const ProjectCard = ({
             className="project-deployed-link"
             as="a"
             href={liveAppLink}
+            target="_blank"
+            rel="noopener noreferrer"
             isExternal
             colorScheme="#0a3543"
             variant="outline"

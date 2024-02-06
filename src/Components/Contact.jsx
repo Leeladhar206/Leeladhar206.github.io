@@ -31,7 +31,12 @@ export const Contact = () => {
         w="70%"
         m="auto"
       >
-        <Link id="contact-github" to="https://github.com/Leeladhar206">
+        <Link
+          id="contact-github"
+          to="https://github.com/Leeladhar206"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Box
             className="contact-box"
             border="1px solid #06113C"
@@ -76,6 +81,8 @@ export const Contact = () => {
         <Link
           id="contact-linkedin"
           to="https://www.linkedin.com/in/leeladharjagarapu/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Box
             className="contact-box"
@@ -95,7 +102,12 @@ export const Contact = () => {
           </Box>
         </Link>
 
-        <Link id="contact-email" to="mailto:leeladharjagarapu@gmail.com">
+        <Link
+          id="contact-email"
+          to="mailto:leeladharjagarapu@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Box
             className="contact-box"
             border="1px solid #06113C"

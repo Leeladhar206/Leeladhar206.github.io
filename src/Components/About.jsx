@@ -80,7 +80,9 @@ export const About = () => {
             >
               6+
             </Text>
-            <Text fontSize={{ base: "sm", lg: "md" }} mt={2}>Solo and Group</Text>
+            <Text fontSize={{ base: "sm", lg: "md" }} mt={2}>
+              Solo and Group
+            </Text>
             <Text fontSize={{ base: "sm", lg: "md" }}>Projects</Text>
           </Box>
           <Box
@@ -115,7 +117,7 @@ export const About = () => {
         w={{ base: "100%", md: "90%", lg: "70%" }}
         margin={"auto"}
       >
-        <Text mt={8} p={1} fontSize={{ base: "14px", lg: "16px" }}>
+        <Text mt={8} p={1} fontSize={{ base: "14px", lg: "18px" }}>
           Aspiring Full Stack Developer with Expertise in CSS, HTML, JS, and
           React. Experienced in solo and team projects. Strong problem-solving
           and communication skills. Ready to play a role in impactful web
@@ -134,7 +136,7 @@ export const About = () => {
         <Text
           mt={4}
           p={1}
-          fontSize={{ base: "14px", lg: "16px" }}
+          fontSize={{ base: "14px", lg: "18px" }}
           fontWeight={300}
         >
           Click on buttons to know more
@@ -153,7 +155,12 @@ export const About = () => {
             }}
           >
             <Icon w="20px" h="20px" as={FaGithub} />
-            <Link id="contact-github" href="https://github.com/Leeladhar206">
+            <Link
+              id="contact-github"
+              to="https://github.com/Leeladhar206"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Text ml={2} mt={1} mr={2}>
                 Github
               </Text>
