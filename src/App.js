@@ -5,8 +5,8 @@ import { Home } from './Components/Home';
 import { About } from './Components/About';
 import { Projects } from './Components/Projects';
 import { Contact } from './Components/Contact';
-import {Github} from './Components/Github';
 import { Box } from '@chakra-ui/react';
+import Tools from './Components/Tools';
 
 function App() {
 
@@ -22,15 +22,16 @@ function App() {
       color="#06113C"
       fontFamily="Lexend, sans-serif"
     >
-      <Box dangerouslySetInnerHTML={{ __html: newFont }} 
+      <Box dangerouslySetInnerHTML={{ __html: newFont }}
       />
-        <Navbar/>
-         <Home/>
-         <About/>
-        <Skills/>
-        <Projects/>
-        <Github/>
-        <Contact/>
+      <Navbar />
+      <Home />
+      <About />
+      <Skills />
+      <Tools />
+      <Projects />
+      {/* <Github /> */}
+      <Contact />
     </Box>
 
   );

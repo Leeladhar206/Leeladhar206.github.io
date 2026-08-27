@@ -52,8 +52,7 @@ export const Home = () => {
           fontFamily={"Lexend, sans-serif"}
           fontWeight={300}
           ml={{ base: "none", md: 2 }}
-        >
-          An aspiring
+        >Software Engineer specializing in
         </Text>
 
         <Text
@@ -62,7 +61,7 @@ export const Home = () => {
           fontWeight={500}
         >
           {" "}
-          Full Stack Web Developer
+          Full Stack Development & Integrations
         </Text>
       </Box>
       <Box w="20%" display={{ base: "none", md: "block" }} />

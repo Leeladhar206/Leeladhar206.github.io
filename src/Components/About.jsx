@@ -54,10 +54,10 @@ export const About = () => {
               fontWeight={500}
               mt={4}
             >
-              1200+
+              2.4+
             </Text>
             <Text fontSize={{ base: "sm", lg: "md" }} mt={2}>
-              Hours of Coding
+              Years of Experience
             </Text>
           </Box>
           <Box
@@ -78,10 +78,10 @@ export const About = () => {
               fontWeight={500}
               mt={5}
             >
-              6+
+              12+
             </Text>
             <Text fontSize={{ base: "sm", lg: "md" }} mt={2}>
-              Solo and Group
+              Web & Client
             </Text>
             <Text fontSize={{ base: "sm", lg: "md" }}>Projects</Text>
           </Box>
@@ -118,10 +118,7 @@ export const About = () => {
         margin={"auto"}
       >
         <Text mt={8} p={1} fontSize={{ base: "14px", lg: "18px" }}>
-          Aspiring Full Stack Developer with Expertise in CSS, HTML, JS, and
-          React. Experienced in solo and team projects. Strong problem-solving
-          and communication skills. Ready to play a role in impactful web
-          development endeavors.
+          Software Engineer with 2+ years of experience in enterprise integrations, backend development, automation, data migration, and document management solutions.
         </Text>
       </Box>
 
@@ -173,7 +170,7 @@ export const About = () => {
             as="a"
             mr={3}
             mb={2}
-            href="https://drive.google.com/file/d/1h7O1jwWdCbvboFWRjhfksp4z0FgWr_Mr/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Cs-Qry4Xg0zUa--hvtAHUsEfNfUbLDQS/view?usp=sharing"
             target="_blank"
             onClick={() => {
               const link = document.createElement("a");
