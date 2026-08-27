@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="paBack" x1="48" y1="48" x2="210" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5C0B7A"/>
+      <stop offset="1" stop-color="#9B159D"/>
+    </linearGradient>
+    <linearGradient id="paTop" x1="108" y1="44" x2="181" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D86BEA"/>
+      <stop offset="1" stop-color="#B936C8"/>
+    </linearGradient>
+    <linearGradient id="paRight" x1="151" y1="102" x2="218" y2="181" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F39BEF"/>
+      <stop offset="1" stop-color="#D65AD9"/>
+    </linearGradient>
+    <linearGradient id="paBottom" x1="103" y1="149" x2="173" y2="218" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C72BC2"/>
+      <stop offset="1" stop-color="#A51BA8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- rear diamond -->
+  <rect x="48" y="48" width="160" height="160" rx="18"
+        transform="rotate(45 128 128)" fill="url(#paBack)"/>
+
+  <!-- upper tile -->
+  <rect x="93" y="40" width="70" height="122" rx="15"
+        transform="rotate(-45 128 101)" fill="url(#paTop)"/>
+
+  <!-- right tile -->
+  <rect x="128" y="93" width="70" height="122" rx="15"
+        transform="rotate(-45 163 154)" fill="url(#paRight)"/>
+
+  <!-- lower tile -->
+  <rect x="93" y="135" width="70" height="91" rx="15"
+        transform="rotate(-45 128 180)" fill="url(#paBottom)"/>
+</svg>
